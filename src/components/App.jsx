@@ -35,7 +35,7 @@ class App extends React.Component {
     if (isNameUnique) {
       const id = nanoid();
       this.setState(prevState => ({
-        contacts: [prevState.contacts, { ...contact, id }],
+        contacts: [...prevState.contacts, { ...contact, id }],
       }));
       this.setState({ name: '', number: '' });
     } else {
